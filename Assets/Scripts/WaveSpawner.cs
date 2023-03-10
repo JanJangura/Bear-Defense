@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class WaveSpawner : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class WaveSpawner : MonoBehaviour
     public float timeBetweenWaves = 5f;
     public float enemySpawnerIntervals = 0.5f;
 
+    public TextMeshProUGUI waveTimer;
     private float countdown = 2f;
     private int waveIndex = 0;
 
@@ -21,6 +23,8 @@ public class WaveSpawner : MonoBehaviour
             StartCoroutine(SpawnWave());
             countdown = timeBetweenWaves;
         }
+
+        waveTimer.text = Mathf.Ceil(countdown).ToString(); // This will cut off all decimal numbers and keep it a whole number
 
         // Time.deltaTime is the amount of time passed since the last time we drew a frame.
         // This will reduce countdown by 1 every sec.
