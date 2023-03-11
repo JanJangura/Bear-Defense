@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class BuildManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static BuildManager instance;
+
+    private void Awake()
     {
-        
+        if(instance == null)
+        {
+            Debug.LogError("More than one BuildManager in Scene!");
+            return;
+        }
+        instance = this;    // Can be reference from anywhere, it's to use only one Build Manager that can be called from anywhere
     }
 
-    // Update is called once per frame
-    void Update()
+    public GameObject standardBearPrefab;
+
+    private void Start()
     {
-        
+        bearToBuild = standardBearPrefab;
+    }
+    private GameObject bearToBuild;
+
+    public GameObject GetBearToBuild()
+    {
+        return bearToBuild;
     }
 }

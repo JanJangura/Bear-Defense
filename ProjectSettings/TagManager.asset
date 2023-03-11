@@ -4,8 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - TurnLeft
-  - TurnRight
+  - Turn
+  - Bee
+  - BlueBerry
   layers:
   - Default
   - TransparentFX

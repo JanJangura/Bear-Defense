@@ -13,12 +13,17 @@ public class WaveSpawner : MonoBehaviour
     public float enemySpawnerIntervals = 0.5f;
 
     public TextMeshProUGUI waveTimer;
-    private float countdown = 2f;
+    public float beginTimer = 2f;
+    private float countdown;
     private int waveIndex = 0;
 
-    void Update()
+    private void Start()
     {
-        if(countdown <= 0f)
+        countdown = beginTimer;
+    }
+    void Update()
+    {        
+        if (countdown <= 0f)
         {
             StartCoroutine(SpawnWave());
             countdown = timeBetweenWaves;

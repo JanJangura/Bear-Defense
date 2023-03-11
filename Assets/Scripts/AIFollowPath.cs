@@ -17,29 +17,10 @@ public class AIFollowPath : MonoBehaviour
         // which is the first child of the WayPoints GameObject.
         target = WayPoints.points[0];
     }
-
     private void FixedUpdate()
     {
         Move();
-        /*
-        Vector2 dir = target.position - transform.position;
-        transform.Translate(dir.normalized * moveSpeed * Time.deltaTime, Space.World);
-
-        if (Vector2.Distance(transform.position, target.position) <= 0.2f)
-        {
-            GetNextWayPoint();
-        }*/
-    }
-    /*
-    private void GetNextWayPoint()
-    {
-        if (wavepointIndex >= WayPoints.points.Length - 1)
-        {
-            Destroy(this.gameObject);
-        }
-        wavepointIndex++;
-        target = WayPoints.points[wavepointIndex];
-    }*/    
+    }   
 
     private void Move()
     {
@@ -64,15 +45,14 @@ public class AIFollowPath : MonoBehaviour
         Physics2D.IgnoreLayerCollision(3, 3);
         if (hitInfo != null)
         {
-            if (hitInfo.tag == "TurnLeft")
+            if (hitInfo.tag == "Turn")          
             {
-                transform.Rotate(0f, 180f, 0f);
-                Debug.Log("HIT!");
+                transform.Rotate(0f, 180f, 0f);     // This is to rotate the sprite on the 180             
             }
-            else if(hitInfo.tag == "TurnRight")
+
+            if(hitInfo.tag == "BlueBerry")
             {
-                transform.Rotate(0f, 0f, 0f);
-                Debug.Log("HIT!");
+                Destroy(this.gameObject);
             }
         }
     }
@@ -82,6 +62,9 @@ public class AIFollowPath : MonoBehaviour
         Physics2D.IgnoreLayerCollision(3, 3);
     }
 
+
+
+    /////////////////////// IGNORE THE REST, BUT CAN GO AHEAD AND LOOK AT THE LAST CODE FOR BRACKEYS
     /*
     private void Move()
     {
@@ -161,5 +144,29 @@ public class AIFollowPath : MonoBehaviour
                 wayPointIndex += 1;
             }
         }
+    }*/
+
+    /* BRACKEYS CODE
+        private void FixedUpdate()
+    {
+        Move();
+        /*
+        Vector2 dir = target.position - transform.position;
+        transform.Translate(dir.normalized * moveSpeed * Time.deltaTime, Space.World);
+
+        if (Vector2.Distance(transform.position, target.position) <= 0.2f)
+        {
+            GetNextWayPoint();
+        }
+    }*/
+    /*
+    private void GetNextWayPoint()
+    {
+        if (wavepointIndex >= WayPoints.points.Length - 1)
+        {
+            Destroy(this.gameObject);
+        }
+        wavepointIndex++;
+        target = WayPoints.points[wavepointIndex];
     }*/
 }
