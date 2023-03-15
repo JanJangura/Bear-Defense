@@ -16,3 +16,4 @@ MonoBehaviour:
   _cost: 4000
   _speed: 3
   _description: This is a Super Bear
+  bear: {fileID: 3707777256020944345, guid: bbc5ad718581d4446ba5a9a4bbf9b149, type: 3}

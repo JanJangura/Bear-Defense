@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Bear
   m_EditorClassIdentifier: 
   _name: Bear
-  _cost: 200
+  _cost: 250
   _speed: 1
   _description: This is a Normal Bear
+  bear: {fileID: 2940660389863351626, guid: b4375bf6a0fe7ac4eb60f6b12d3126a5, type: 3}

@@ -7,6 +7,10 @@ TagManager:
   - Turn
   - Bee
   - BlueBerry
+  - Flowers
+  - Grass
+  - Waypoints
+  - Space
   layers:
   - Default
   - TransparentFX
@@ -14,11 +18,11 @@ TagManager:
   - Bee
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Flowers
+  - Grass
+  - Waypoints
+  - Space
+  - Bear
   - 
   - 
   - 

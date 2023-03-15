@@ -37,6 +37,9 @@ public class Bear : ScriptableObject
     // The Description you would like to have for this G.O.
     [TextArea][SerializeField] private string _description;
 
+    // The GameObject
+    public GameObject bear;
+
     // To access the data on our Scriptable Objects.
     public string Name => _name;        
     public int Cost => _cost;
