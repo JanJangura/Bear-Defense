@@ -5,14 +5,15 @@ using UnityEngine;
 public class RedBumbleBee : AIFollowPath
 {
     [Header("Game Object")]
-    public GameObject yellowBee;
+    public GameObject yellowBee;   
 
     AIFollowPath AIFP;
 
     protected override void Die()
     {
+        Instantiate(PEPrefab, transform.position, Quaternion.identity);
         Instantiate(yellowBee, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
-        AdditionalIncome(2);
+        AdditionalIncome(1);
     }
 }

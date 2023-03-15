@@ -137,5 +137,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyBee: {fileID: 11400000, guid: 0587dcb9e3cfb7b4294d3378b8c96c74, type: 2}
+  PEPrefab: {fileID: 6287980849367258208, guid: 37ffe5decf5538540b29ff4b33d702ce, type: 3}
   wavepointIndex: 0
   moveSpeed: 0

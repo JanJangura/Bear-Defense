@@ -7,7 +7,8 @@ using UnityEngine;
 public class AIFollowPath : MonoBehaviour
 {
     [Header("Scriptable Object")]
-    [SerializeField] private Bee enemyBee;   
+    [SerializeField] private Bee enemyBee;
+    public GameObject PEPrefab;
 
     [Header("Privates")]
     private Transform target;
@@ -94,6 +95,7 @@ public class AIFollowPath : MonoBehaviour
 
     protected virtual void Die()
     {
+        Instantiate(PEPrefab, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
         AdditionalIncome(x);       
     }

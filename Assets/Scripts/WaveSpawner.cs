@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEditor.Experimental.GraphView;
-using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 
 public class WaveSpawner : MonoBehaviour
 {
@@ -35,8 +34,8 @@ public class WaveSpawner : MonoBehaviour
     private float moneyCountDown;
     private int waveIndex = 0;
     private int additionalIncome = 0;
-    int kills = 0;
-    int index = 0;
+    public int kills = 0;
+    public int index = 0;
 
     private void Start()
     {
@@ -62,12 +61,29 @@ public class WaveSpawner : MonoBehaviour
         AdditionalMoney.text = "Additional $ " + additionalIncome;
         IncomeTimer.text = "+ $100 Timer: " + Mathf.Ceil(moneyCountDown).ToString();
         Kills.text = "Kills: " + kills;
-        Round.text = "Round " + index.ToString();
+        Round.text = "Wave " + index.ToString();
+
+        SavedValues();
 
         // Time.deltaTime is the amount of time passed since the last time we drew a frame.
         // This will reduce countdown by 1 every sec.
         countdown -= Time.deltaTime;
         moneyCountDown -= Time.deltaTime;
+    }
+
+    public void SavedValues()
+    {
+        if(kills > PlayerPrefs.GetInt("Kills", 0))
+        {
+            PlayerPrefs.SetInt("KILLS", kills);
+        }
+        if (index > PlayerPrefs.GetInt("Waves", 0))
+        {
+            PlayerPrefs.SetInt("WAVES", index);
+        }
+
+        PlayerPrefs.SetInt("CURRENTKILLS", kills);
+        PlayerPrefs.SetInt("CURRENTWAVES", index);
     }
 
     IEnumerator SpawnWave()

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class BeeHive : MonoBehaviour
@@ -22,6 +23,11 @@ public class BeeHive : MonoBehaviour
     {
         currentHealth -= damage;
         health.SetHealth(currentHealth);
+
+        if(currentHealth <= 0)
+        {
+            SceneManager.LoadScene("Results");
+        }
     }
 
     public void Update()
