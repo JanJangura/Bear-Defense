@@ -5,10 +5,11 @@ using UnityEngine.Rendering;
 
 public class PlacementManager : MonoBehaviour
 {
-    public GameObject basicTowerObject;
+    public Shop ShopManager;
+    public GameObject bigXPrefab;
 
     private GameObject dummyPlacement; // The image of the prefab before placing it down
-
+    private GameObject currentTowerPlacement;
     private GameObject hoverBackground; // Used for the raycast
 
     public Camera cam;
@@ -18,10 +19,37 @@ public class PlacementManager : MonoBehaviour
 
     public bool isBuilding;
 
-    // Start is called before the first frame update
-    void Start()
+    RaycastHit2D hit;
+
+    // Update is called once per frame
+    void Update()
     {
-        StartBuilding();
+
+        Vector2 mousePosition = GetMousePosition();
+
+        hit = Physics2D.Raycast(mousePosition, new Vector2(0, 0), 0.1f, mask, -100, 100);
+
+        if (isBuilding == true)
+        {
+            if (dummyPlacement != null)
+            {
+                GetCurrentHoverBackground();
+
+                if (hoverBackground != null)
+                {
+                    dummyPlacement.transform.position = GetMousePosition();
+
+                    if (Input.GetButtonDown("Fire1"))
+                    {
+                        PlaceBuilding();
+                    }
+                    else if (Input.GetKeyDown(KeyCode.Escape))
+                    {
+                        EndBuilding();
+                    }
+                }
+            }
+        }
     }
 
     public Vector2 GetMousePosition()
@@ -30,22 +58,20 @@ public class PlacementManager : MonoBehaviour
     }
 
     public void GetCurrentHoverBackground()
-    {
-        Vector2 mousePosition = GetMousePosition();
-
-        RaycastHit2D hit = Physics2D.Raycast(mousePosition, new Vector2(0, 0), 0.1f, mask, -100, 100);
-
+    {     
         if (hit.collider != null)
         {
             hoverBackground = hit.collider.gameObject;
         }
     }
 
-    public void StartBuilding()
+    public void StartBuilding(GameObject towerToBuild)
     {
         isBuilding = true;
 
-        dummyPlacement = Instantiate(basicTowerObject);
+        currentTowerPlacement = towerToBuild;
+
+        dummyPlacement = Instantiate(currentTowerPlacement, GetMousePosition(), Quaternion.identity);
 
         if (dummyPlacement.GetComponent<BearTowers>() != null)
         {
@@ -73,12 +99,26 @@ public class PlacementManager : MonoBehaviour
     {
         if (CheckForTower() == false)
         {
-            GameObject newTowerObject = Instantiate(basicTowerObject);
-            newTowerObject.layer = 10;
-            newTowerObject.transform.position = GetMousePosition();
-
-            EndBuilding();
+            if (ShopManager.CanBuyTower(currentTowerPlacement) == true && hit.collider.tag != "NoBuild" && hit.collider.tag != "Flowers")
+            {
+                GameObject newTowerObject = Instantiate(currentTowerPlacement);
+                InstatiatingObjects(newTowerObject);
+                ShopManager.BuyTower(currentTowerPlacement);
+            }
+            else
+            {
+                Instantiate(bigXPrefab, GetMousePosition(), Quaternion.identity);
+                EndBuilding();
+            }
         }
+    }
+
+    public void InstatiatingObjects(GameObject newTowerObject)
+    {
+        newTowerObject.layer = 10;
+        newTowerObject.transform.position = GetMousePosition();
+
+        EndBuilding();
     }
 
     public void EndBuilding()
@@ -87,29 +127,7 @@ public class PlacementManager : MonoBehaviour
 
         if (dummyPlacement != null)
         {
-            Destroy(dummyPlacement);
+            Destroy(dummyPlacement);           
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (isBuilding == true)
-        {
-            if(dummyPlacement != null)
-            {
-                GetCurrentHoverBackground();
-
-                if(hoverBackground != null)
-                {
-                    dummyPlacement.transform.position = GetMousePosition();
-
-                    if (Input.GetButtonDown("Fire1"))
-                    {
-                        PlaceBuilding();
-                    }
-                }              
-            } 
-        }
-    }
+    }    
 }

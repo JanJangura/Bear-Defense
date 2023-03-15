@@ -21,7 +21,7 @@ public class TowersUIController : MonoBehaviour
         _towerInformationPanel.SetActive(true);
 
         _towerName.text = towerInformation.Name;
-        _towerCost.text = $"<b>Cost:</b> {towerInformation.Cost.ToString()}";
+        _towerCost.text = $"<b>Cost:</b> $ {towerInformation.Cost.ToString()}";
         _towerSpeed.text = $"<b>Speed:</b> {towerInformation.Speed}";
         _towerDescription.text = towerInformation.Description;
     }

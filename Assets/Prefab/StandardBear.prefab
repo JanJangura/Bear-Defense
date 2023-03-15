@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -1263453043153719033}
   m_Layer: 0
   m_Name: StandardBear
-  m_TagString: Untagged
+  m_TagString: Bear
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BearTowerPrefab: {fileID: 2940660389863351629}
-  shootingRange: 2
+  shootingRange: 2.5
   bulletPrefab: {fileID: 9006887067957327690, guid: a4ad13f2d6ba02e4cabffeb91100c322, type: 3}
   firePoint: {fileID: 2940660390398543680}
   rateOfFire: 1

@@ -15,5 +15,6 @@ MonoBehaviour:
   _name: Bear
   _cost: 250
   _speed: 1
-  _description: This is a Normal Bear
+  _description: This is a Standard Bear that will shoot at Medium Speed. Cheap, but
+    highly efficient.
   bear: {fileID: 2940660389863351626, guid: b4375bf6a0fe7ac4eb60f6b12d3126a5, type: 3}

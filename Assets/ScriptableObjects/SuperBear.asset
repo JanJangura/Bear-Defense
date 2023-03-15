@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: SuperBear
   m_EditorClassIdentifier: 
   _name: Super Bear
-  _cost: 4000
-  _speed: 3
-  _description: This is a Super Bear
+  _cost: 2000
+  _speed: 2
+  _description: This is a Super Bear that will shoot at Fast Speed. He will do you
+    justice.
   bear: {fileID: 3707777256020944345, guid: bbc5ad718581d4446ba5a9a4bbf9b149, type: 3}

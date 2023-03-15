@@ -4,13 +4,19 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Turn
   - Bee
   - BlueBerry
   - Flowers
   - Grass
   - Waypoints
   - Space
+  - SuperBear
+  - Bear
+  - TurnLeft
+  - TurnRight
+  - WaveSpawner
+  - NoBuild
+  - BeeHive
   layers:
   - Default
   - TransparentFX
@@ -23,8 +29,8 @@ TagManager:
   - Waypoints
   - Space
   - Bear
-  - 
-  - 
+  - NoBuild
+  - RedBee
   - 
   - 
   - 
