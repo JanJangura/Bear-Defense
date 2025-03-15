@@ -280,11 +280,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 775694201}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -368.18005, y: 16.935}
+  m_AnchoredPosition: {x: -363.17004, y: -0.8250103}
   m_SizeDelta: {x: 241.42, y: 43.8709}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &255624640
@@ -614,10 +614,10 @@ RectTransform:
   - {fileID: 1516434199}
   - {fileID: 804065649}
   - {fileID: 1574512004}
-  - {fileID: 1047704538}
   - {fileID: 1375259361}
   - {fileID: 1603836931}
   - {fileID: 255624639}
+  - {fileID: 1047704538}
   - {fileID: 1196754433}
   - {fileID: 871871283}
   m_Father: {fileID: 0}
@@ -870,11 +870,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 775694201}
-  m_RootOrder: 5
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 104.98996, y: -119.24}
+  m_AnchoredPosition: {x: 110, y: -137}
   m_SizeDelta: {x: 1187.7529, y: 228.472}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1047704539
@@ -1100,8 +1100,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -133.97003, y: 149.302}
-  m_SizeDelta: {x: 709.8423, y: 184.3929}
+  m_AnchoredPosition: {x: -18.3133, y: 145.75}
+  m_SizeDelta: {x: 941.1558, y: 191.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1196754434
 MonoBehaviour:
@@ -1130,7 +1130,9 @@ MonoBehaviour:
     3/15/2023
 
     Class:
-    Game Genre Development'
+    Game Genre Development
+
+    All Art was done in Adobe Illustrator'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cc600f2bcb762c64bbfda227fe207321, type: 2}
   m_sharedMaterial: {fileID: 4130254330803191329, guid: cc600f2bcb762c64bbfda227fe207321, type: 2}
@@ -1238,11 +1240,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 775694201}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 552.49, y: -137.91}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -407.51, y: 402.09}
   m_SizeDelta: {x: 162.76318, y: 46.207886}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1375259362
@@ -1525,12 +1527,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 775694201}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 805, y: -188}
-  m_SizeDelta: {x: 667.774, y: 53.96997}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 100.900024, y: 350.85492}
+  m_SizeDelta: {x: 1179.6001, y: 56.260193}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1603836932
 MonoBehaviour:
@@ -1552,7 +1554,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Developer: Mouahkong-Alex Yang'
+  m_text: 'Developer & Artist: Mouahkong-Alex Yang'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cc600f2bcb762c64bbfda227fe207321, type: 2}
   m_sharedMaterial: {fileID: 4130254330803191329, guid: cc600f2bcb762c64bbfda227fe207321, type: 2}
