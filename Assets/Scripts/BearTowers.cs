@@ -19,7 +19,8 @@ public class BearTowers : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("UpdateTarget", 0f, 0.5f); // This Checks for Target every certain seconds. In this case 0.5f secs.
+        InvokeRepeating("UpdateTarget", 0f, 0.001f); // This Checks for Target every certain seconds. In this case 0.5f secs.
+        Destroy(this.gameObject, 120f);
     }
 
     // Update is called once per frame

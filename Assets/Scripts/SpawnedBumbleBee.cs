@@ -4,7 +4,7 @@ using System.Net.Http.Headers;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class AIFollowPath : MonoBehaviour
+public class SpawnedBumbleBee : MonoBehaviour
 {
     [Header("Scriptable Object")]
     [SerializeField] private Bee enemyBee;
@@ -27,15 +27,14 @@ public class AIFollowPath : MonoBehaviour
     {
         // We are calling this points array from the "WayPoints" script and accessing here. Our target position is set equal to the position of points,
         // which is the first child of the WayPoints GameObject.
-        Index();
         waveSpawner = GameObject.Find("WaveSpawner").GetComponent<WaveSpawner>();
         BH = GameObject.Find("BeeHive").GetComponent<BeeHive>();
         Assignment();        
     }
 
-    public virtual void Index()
+    public void Index(int point)
     {
-        target = WayPoints.points[0];
+        target = WayPoints.points[point];
     }
 
     public void Assignment()

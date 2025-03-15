@@ -17,6 +17,7 @@ TagManager:
   - WaveSpawner
   - NoBuild
   - BeeHive
+  - SpawnedBumbleBee
   layers:
   - Default
   - TransparentFX

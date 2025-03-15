@@ -1228,7 +1228,7 @@ MonoBehaviour:
   Kills: {fileID: 1909788144}
   IncomeTimer: {fileID: 2082169357}
   Round: {fileID: 347458016}
-  beginTimer: 6
+  beginTimer: 2
   kills: 0
   index: 0
 --- !u!1 &304005655
@@ -7465,7 +7465,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.74533325, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00012207031, y: 0}
+  m_AnchoredPosition: {x: -0.00024414062, y: 0}
   m_SizeDelta: {x: -0.00036621, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1881251838

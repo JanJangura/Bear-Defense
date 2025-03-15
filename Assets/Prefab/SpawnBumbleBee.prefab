@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3531291481716344954
+--- !u!1 &3123660518526579076
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3531291481716344949}
-  - component: {fileID: 3531291481716344948}
-  - component: {fileID: 3531291481716344951}
-  - component: {fileID: 174957828157221145}
-  - component: {fileID: -7883066867139323786}
-  m_Layer: 12
-  m_Name: BumbleBee - Copy
+  - component: {fileID: 3123660518526579083}
+  - component: {fileID: 3123660518526579082}
+  - component: {fileID: 3123660518526579081}
+  - component: {fileID: 1744372320750571751}
+  - component: {fileID: -4828416000796427050}
+  m_Layer: 3
+  m_Name: SpawnBumbleBee
   m_TagString: Bee
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3531291481716344949
+--- !u!4 &3123660518526579083
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3531291481716344954}
+  m_GameObject: {fileID: 3123660518526579076}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -112.16143, y: -4.033688, z: -0.019122798}
+  m_LocalPosition: {x: -131.44084, y: -9.773965, z: -0.019122798}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &3531291481716344948
+--- !u!212 &3123660518526579082
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3531291481716344954}
+  m_GameObject: {fileID: 3123660518526579076}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 678f5d24c2681f94f941dcf9f3ba0d5f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ef7701c6711544b46a4081561ef4c6d1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -87,14 +87,14 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &3531291481716344951
+--- !u!50 &3123660518526579081
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3531291481716344954}
+  m_GameObject: {fileID: 3123660518526579076}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -108,13 +108,13 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!58 &174957828157221145
+--- !u!58 &1744372320750571751
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3531291481716344954}
+  m_GameObject: {fileID: 3123660518526579076}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -124,25 +124,24 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.09276581}
   serializedVersion: 2
   m_Radius: 0.30649447
---- !u!114 &-7883066867139323786
+--- !u!114 &-4828416000796427050
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3531291481716344954}
+  m_GameObject: {fileID: 3123660518526579076}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c4e3bf0bf5e95d4991dbc7909ca3edf, type: 3}
+  m_Script: {fileID: 11500000, guid: 36cb01f9e142c88408baa3f463426209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyBee: {fileID: 11400000, guid: c1e5f5a376a0ff444a3a8a58d9c21883, type: 2}
-  PEPrefab: {fileID: 9058060621646736747, guid: 65d527e0440444f48803b7cc47b69278, type: 3}
+  enemyBee: {fileID: 11400000, guid: 0587dcb9e3cfb7b4294d3378b8c96c74, type: 2}
+  PEPrefab: {fileID: 6287980849367258208, guid: 37ffe5decf5538540b29ff4b33d702ce, type: 3}
   target: {fileID: 0}
   wavepointIndex: 0
   WPI: 0
   moveSpeed: 0
   x: 1
+  spawnedBee: 0
   index: 0
-  yellowBee: {fileID: 3123660518526579076, guid: fc7523be8af95314397e9363c7d37a9e, type: 3}
-  holder: 0

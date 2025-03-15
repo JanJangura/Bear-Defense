@@ -88,7 +88,6 @@ public class WaveSpawner : MonoBehaviour
 
     IEnumerator SpawnWave()
     {
-        waveIndex++;
         for (int i = 0; i < waveIndex; i++)
         {
             // Spawn Enemy, then wait .5f seconds and repeat for however many times the waveNumber is
@@ -101,6 +100,7 @@ public class WaveSpawner : MonoBehaviour
             SpawnRedEnemy();
             yield return new WaitForSeconds(enemySpawnerIntervals);
         }
+        waveIndex++;
     }
 
     public void AdditionalIncome(int amount)
