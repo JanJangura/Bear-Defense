@@ -8,7 +8,7 @@ public class WaveSpawner : MonoBehaviour
 {
     [Header("Money")]
     public int defaultIncome = 100;
-    public float incomeTimer = 3f;
+    public float incomeTimer = 6f;
     MoneyEditor ME;
     public GameObject moneyEditor;
 
@@ -16,7 +16,7 @@ public class WaveSpawner : MonoBehaviour
     public Transform redEnemyPrefab;
     public Transform spawnPoint;
 
-    public float timeBetweenWaves = 5f;
+    public float timeBetweenWaves = 10f;
     public float enemySpawnerIntervals = 0.5f;
 
     public Bee standardBee;
@@ -88,13 +88,13 @@ public class WaveSpawner : MonoBehaviour
 
     IEnumerator SpawnWave()
     {
-        for (int i = 0; i < waveIndex; i++)
+        for (int i = 0; i <= waveIndex; i++)
         {
             // Spawn Enemy, then wait .5f seconds and repeat for however many times the waveNumber is
             SpawnEnemy();
             yield return new WaitForSeconds(enemySpawnerIntervals);
         }
-        for (int i = 0; i < waveIndex / 2; i++)
+        for (int i = 0; i < waveIndex / 1.5; i++)
         {
             // Spawn Enemy, then wait .5f seconds and repeat for however many times the waveNumber is
             SpawnRedEnemy();

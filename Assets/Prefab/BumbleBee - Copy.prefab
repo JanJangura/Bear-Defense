@@ -144,5 +144,5 @@ MonoBehaviour:
   moveSpeed: 0
   x: 1
   index: 0
-  yellowBee: {fileID: 3123660518526579076, guid: fc7523be8af95314397e9363c7d37a9e, type: 3}
+  yellowBee: {fileID: 3123660518526579076, guid: b05e549a81be65344bc0e301b2d641c6, type: 3}
   holder: 0

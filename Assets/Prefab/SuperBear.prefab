@@ -103,7 +103,7 @@ MonoBehaviour:
   shootingRange: 7
   bulletPrefab: {fileID: 9006887067957327690, guid: a4ad13f2d6ba02e4cabffeb91100c322, type: 3}
   firePoint: {fileID: 3707777256559413203}
-  rateOfFire: 0.5
+  rateOfFire: 0.2
   BeeTag: Bee
 --- !u!61 &8488345115861250452
 BoxCollider2D:

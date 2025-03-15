@@ -745,9 +745,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c31528d9b3d9b594f8b5c522b3b2ecc0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 63d4af41c7bc0da4f97a94792a80e478, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.089
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1214,12 +1214,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultIncome: 100
-  incomeTimer: 4
+  incomeTimer: 6
   moneyEditor: {fileID: 1524297476}
   enemyPrefab: {fileID: 5594361085139495162, guid: f104f6cd62d14ac4d853216c4cb57604, type: 3}
   redEnemyPrefab: {fileID: 3531291481716344949, guid: 3b02950fc55eedc4db01639a62cabe90, type: 3}
   spawnPoint: {fileID: 738476916}
-  timeBetweenWaves: 5
+  timeBetweenWaves: 10
   enemySpawnerIntervals: 0.3
   standardBee: {fileID: 0}
   superBee: {fileID: 0}
@@ -1228,7 +1228,7 @@ MonoBehaviour:
   Kills: {fileID: 1909788144}
   IncomeTimer: {fileID: 2082169357}
   Round: {fileID: 347458016}
-  beginTimer: 2
+  beginTimer: 10
   kills: 0
   index: 0
 --- !u!1 &304005655
@@ -2725,8 +2725,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.055720355, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000015258789, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -7.809906, y: 0}
+  m_SizeDelta: {x: 15.62, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &543441320
 MonoBehaviour:
@@ -3099,7 +3099,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.9007205, y: 1}
   m_AnchoredPosition: {x: 0.0002746582, y: -0.00021362305}
-  m_SizeDelta: {x: -0.00048828125, y: -0.0005187988}
+  m_SizeDelta: {x: -0.00048828, y: -0.00045776}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &610895041
 MonoBehaviour:
@@ -3121,7 +3121,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 5
+  m_text: '10
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -3184,7 +3186,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -0.535492, y: 0, z: 0, w: -0.22784424}
+  m_margin: {x: -0.535492, y: 0, z: -27.284485, w: -0.22784424}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4210,7 +4212,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -273, y: -44}
+  m_AnchoredPosition: {x: -226, y: -43.358032}
   m_SizeDelta: {x: 280.3349, y: 62.141}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &848792560
@@ -4226,7 +4228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6509434, g: 0.6509434, b: 0.6509434, a: 0.392}
+  m_Color: {r: 0.6509434, g: 0.6509434, b: 0.6509434, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5216,7 +5218,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 1435566505}
   m_HandleRect: {fileID: 0}
@@ -7541,7 +7543,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 158.70581, y: -141}
+  m_AnchoredPosition: {x: 158.71, y: -168.29}
   m_SizeDelta: {x: 283.0817, y: 56.9211}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1909788144

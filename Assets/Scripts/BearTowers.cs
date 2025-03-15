@@ -20,7 +20,7 @@ public class BearTowers : MonoBehaviour
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.001f); // This Checks for Target every certain seconds. In this case 0.5f secs.
-        Destroy(this.gameObject, 120f);
+        Destroy(this.gameObject, 100f);
     }
 
     // Update is called once per frame

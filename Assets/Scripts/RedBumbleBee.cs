@@ -15,7 +15,7 @@ public class RedBumbleBee : AIFollowPath
         Destroy(this.gameObject);
 
         GameObject newYellowBee = Instantiate(yellowBee, transform.position, Quaternion.identity);
-        AIFollowPath newYellowBeeScript = newYellowBee.GetComponent<AIFollowPath>();
+        SpawnedBumbleBee newYellowBeeScript = newYellowBee.GetComponent<SpawnedBumbleBee>();
         
         if(newYellowBee != null && newYellowBeeScript != null)
         {
